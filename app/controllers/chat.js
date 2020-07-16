@@ -1,3 +1,5 @@
+const { emit } = require("../../config/server");
+
 module.exports.iniciaChat = function(aplication, req, res){
 
     let dadosForm = req.body;
@@ -11,6 +13,8 @@ module.exports.iniciaChat = function(aplication, req, res){
         res.render('index', {validacao : erros});
         return
     }
+
+    aplication.get('io').emit('msgCliente', {apelido: dadosForm.apelido, mensagem: 'Acabou de entrar.'})
 
     res.render("chat");
 }
