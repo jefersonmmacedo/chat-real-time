@@ -12,9 +12,16 @@ app.set('io', io);
 
 //Crando conexao por websocket
 io.on('connection', (socket) => {
-    console.log('Jeferson est´´aá conectado no chat');
+    console.log(' Novo usuario conectado no chat');
 
     socket.on('disconnect', ()=> {
-        console.log('Jeferson desconectou do chat')
-    })
+        console.log('Usuario desconectou do chat')
+    });
+
+    socket.on('msgServidor', (data) =>{
+        socket.emit('msgCliente', {apelido: data.apelido, mensagem: data.mensagem});
+
+        socket.broadcast.emit('msgCliente', {apelido: data.apelido, mensagem: data.mensagem});
+
+    });
 });
