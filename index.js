@@ -10,7 +10,7 @@ let io = require('socket.io').listen(server);
 
 app.set('io', io);
 
-//Crando conexao por websocket
+//Criando conexao por websocket
 io.on('connection', (socket) => {
     console.log(' Novo usuario conectado no chat');
 
@@ -19,9 +19,19 @@ io.on('connection', (socket) => {
     });
 
     socket.on('msgServidor', (data) =>{
+
+        //Troca de mensagens dos usuários do chat
         socket.emit('msgCliente', {apelido: data.apelido, mensagem: data.mensagem});
 
         socket.broadcast.emit('msgCliente', {apelido: data.apelido, mensagem: data.mensagem});
 
+        // Atualização dos participantes do chat
+
+        if (parseInt(data.apelidoAtualizado) == 0) {
+            socket.emit('novoCliente', { apelido: data.apelido });
+
+        socket.broadcast.emit('novoCliente', { apelido: data.apelido });
+        };
+        
     });
 });
