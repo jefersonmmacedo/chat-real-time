@@ -1,7 +1,7 @@
 # chat-real-time - Beta. Chat!
-Chat realtime Multiroom com Socket.Io e Node Js.
+## Chat realtime Multiroom com Socket.Io e Node Js.
 
-Projeto foi desenvolvido utilizando as seguintes dependências e versões:
+#### Projeto foi desenvolvido utilizando as seguintes dependências e versões:
 - Para iniciar o projeto:
 ```
 npm init
