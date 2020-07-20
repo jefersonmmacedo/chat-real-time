@@ -31,8 +31,9 @@ npm install express-validator@3.2.0 --save
 npm install socket.io@3.2.0 --save
 ```
 
+
 O Chat foi desenvolvio em aulas no curso de Node Js e Mongo DB do Professor Jorge Sant' Ana, na Ydemy.
 
-O objetivo é trazer a expreriência de de uma conversa em tempo real entre 2 clientes dentro do chat.
-Projeto bem básico focando no aprendizado da utilização do Socket.Io
+O objetivo é trazer a experiência de uma conversa em tempo real entre 2 clientes dentro do chat.
+Projeto básico focando no aprendizado da utilização do Socket.Io
 
