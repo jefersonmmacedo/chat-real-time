@@ -34,14 +34,15 @@ npm install socket.io@3.2.0 --save
 
 ### O Chat foi desenvolvio em aulas no curso de Node Js e Mongo DB do Professor Jorge Sant' Ana, na Udemy.
 
-#### O objetivo é trazer a experiência de uma conversa em tempo real entre 2 clientes dentro do chat.
-#### Projeto básico focando no aprendizado da utilização do Socket.Io
+#### O objetivo é trazer a experiência de uma conversa em tempo real entre 2 ou mais clientes dentro do chat. Projeto básico focando no aprendizado da utilização do Socket.Io.
 
 > Tela de login.
+                
                 
 ![](https://github.com/jefersonmmacedo/chat-real-time/blob/master/app/public/images/tela-login.png)
 
 > Tela do chat ( Conversas ).
+                
                 
 ![](https://github.com/jefersonmmacedo/chat-real-time/blob/master/app/public/images/tela-chat.png)
 
